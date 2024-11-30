@@ -73,7 +73,7 @@ export default function Home() {
         {!activeImage || !prompt ? (
           <div className="max-w-xl md:max-w-4xl lg:max-w-3xl">
             <p className="text-xl font-semibold text-gray-200 md:text-3xl lg:text-4xl">
-              Generate any images in real-time.
+              Real-time images generator.
             </p>
             <p className="mt-4 text-balance text-sm text-gray-300 md:text-base lg:text-lg">
               It&apos;s very easy to use Chloe AI. just Enter commands and generate images in milliseconds as you type.
@@ -128,7 +128,7 @@ export default function Home() {
                 required
                 value={prompt}
                 onChange={(e) => setPrompt(e.target.value)}
-                className="w-full resize-none border-gray-300 border-opacity-50 bg-gray-400 px-4 text-base placeholder-gray-300"
+                className="fieldset-start w-full resize-none border-gray-300 border-opacity-50 bg-gray-400 px-4 text-base placeholder-gray-300"
               />
               <div
                 className={`${isFetching || isDebouncing ? "flex" : "hidden"} absolute bottom-3 right-3 items-center justify-center`}
@@ -137,7 +137,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="mt-3 text-sm md:text-right">
+            {/* <div className="mt-3 text-sm md:text-right">
               <label
                 title="Use earlier images as references"
                 className="inline-flex items-center gap-2"
@@ -148,7 +148,7 @@ export default function Home() {
                   onCheckedChange={setIterativeMode}
                 />
               </label>
-            </div>
+            </div> */}
           </fieldset>
         </form>
       </div>

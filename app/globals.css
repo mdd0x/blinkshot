@@ -73,3 +73,11 @@
     opacity: 0.25;
   }
 }
+
+.bodychloe {
+  background-position: center !important;
+}
+
+.fieldset-start {
+  background: transparent;
+}

@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import PlausibleProvider from "next-plausible";
 import localFont from "next/font/local";
 import "./globals.css";
+import { BackpackIcon } from "@radix-ui/react-icons";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -56,8 +57,8 @@ export default function RootLayout({
         <PlausibleProvider domain="blinkshot.io" />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} dark h-full min-h-full bg-[length:6px] font-mono text-gray-100 antialiased`}
-        style={{ backgroundImage: `url(${bgPattern.src}` }}
+        className={`${geistSans.variable} ${geistMono.variable} bodychloe dark h-full min-h-full bg-[length:6px] font-mono text-gray-100 antialiased`}
+        style={{ background: `url(https://i.ibb.co.com/DghKKH7/color4bg-2024-12-01-02-35-40.png`}}
       >
         <Providers>{children}</Providers>
       </body>
