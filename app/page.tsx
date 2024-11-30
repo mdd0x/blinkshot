@@ -3,7 +3,7 @@
 import Logo from "@/components/logo";
 import Spinner from "@/components/spinner";
 import { Button } from "@/components/ui/button";
-import { Switch } from "@/components/ui/switch";
+// import { Switch } from "@/components/ui/switch";
 import { Textarea } from "@/components/ui/textarea";
 import imagePlaceholder from "@/public/image-placeholder.png";
 import { useQuery } from "@tanstack/react-query";
@@ -18,7 +18,7 @@ type ImageResponse = {
 
 export default function Home() {
   const [prompt, setPrompt] = useState("");
-  const [iterativeMode, setIterativeMode] = useState(false);
+  const [iterativeMode] = useState(false);
   const [userAPIKey] = useState("");
   const debouncedPrompt = useDebounce(prompt, 300);
   const [generations, setGenerations] = useState<
