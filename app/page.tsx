@@ -76,7 +76,7 @@ export default function Home() {
               Generate any images in real-time.
             </p>
             <p className="mt-4 text-balance text-sm text-gray-300 md:text-base lg:text-lg">
-            It's very easy to use Chloe AI. just Enter commands and generate images in milliseconds as you type.
+              It&apos;s very easy to use Chloe AI. just Enter commands and generate images in milliseconds as you type.
             </p>
           </div>
         ) : (
