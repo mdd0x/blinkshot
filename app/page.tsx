@@ -2,6 +2,7 @@
 
 import GithubIcon from "@/components/icons/github-icon";
 import XIcon from "@/components/icons/x-icon";
+import TelegramIcon from "@/components/icons/telegram-icon";
 import Logo from "@/components/logo";
 import Spinner from "@/components/spinner";
 import { Button } from "@/components/ui/button";
@@ -67,80 +68,23 @@ export default function Home() {
     <div className="flex h-full flex-col px-5">
       <header className="flex justify-center pt-20 md:justify-end md:pt-3">
         <div className="absolute left-1/2 top-6 -translate-x-1/2">
-          <a href="https://www.dub.sh/together-ai" target="_blank">
+          <a href="https://chloesolana.xyz/" target="_blank" className="mb-20">
             <Logo />
           </a>
         </div>
-        <div>
-          <label className="text-xs text-gray-200">
-            [Optional] Add your{" "}
-            <a
-              href="https://api.together.xyz/settings/api-keys"
-              target="_blank"
-              className="underline underline-offset-4 transition hover:text-blue-500"
-            >
-              Together API Key
-            </a>{" "}
-          </label>
-          <Input
-            placeholder="API Key"
-            type="password"
-            value={userAPIKey}
-            className="mt-1 bg-gray-400 text-gray-200 placeholder:text-gray-300"
-            onChange={(e) => setUserAPIKey(e.target.value)}
-          />
-        </div>
       </header>
-
-      <div className="flex justify-center">
-        <form className="mt-10 w-full max-w-lg">
-          <fieldset>
-            <div className="relative">
-              <Textarea
-                rows={4}
-                spellCheck={false}
-                placeholder="Describe your image..."
-                required
-                value={prompt}
-                onChange={(e) => setPrompt(e.target.value)}
-                className="w-full resize-none border-gray-300 border-opacity-50 bg-gray-400 px-4 text-base placeholder-gray-300"
-              />
-              <div
-                className={`${isFetching || isDebouncing ? "flex" : "hidden"} absolute bottom-3 right-3 items-center justify-center`}
-              >
-                <Spinner className="size-4" />
-              </div>
-            </div>
-
-            <div className="mt-3 text-sm md:text-right">
-              <label
-                title="Use earlier images as references"
-                className="inline-flex items-center gap-2"
-              >
-                Consistency mode
-                <Switch
-                  checked={iterativeMode}
-                  onCheckedChange={setIterativeMode}
-                />
-              </label>
-            </div>
-          </fieldset>
-        </form>
-      </div>
-
       <div className="flex w-full grow flex-col items-center justify-center pb-8 pt-4 text-center">
         {!activeImage || !prompt ? (
           <div className="max-w-xl md:max-w-4xl lg:max-w-3xl">
             <p className="text-xl font-semibold text-gray-200 md:text-3xl lg:text-4xl">
-              Generate images in real-time
+              Generate any images in real-time.
             </p>
             <p className="mt-4 text-balance text-sm text-gray-300 md:text-base lg:text-lg">
-              Enter a prompt and generate images in milliseconds as you type.
-              Powered by Flux on Together AI.
+            It's very easy to use Chloe AI. just Enter commands and generate images in milliseconds as you type.
             </p>
           </div>
         ) : (
-          <div className="mt-4 flex w-full max-w-4xl flex-col justify-center">
+          <div className="mt-10 flex w-full max-w-4xl flex-col justify-center">
             <div>
               <Image
                 placeholder="blur"
@@ -176,57 +120,83 @@ export default function Home() {
         )}
       </div>
 
+
+      <div className="flex justify-center">
+        <form className="mt-10 w-full max-w-lg">
+          <fieldset>
+            <div className="relative">
+              <Textarea
+                rows={4}
+                spellCheck={false}
+                placeholder="e.g: cat, squirrel, and raccoons fighting for justice."
+                required
+                value={prompt}
+                onChange={(e) => setPrompt(e.target.value)}
+                className="w-full resize-none border-gray-300 border-opacity-50 bg-gray-400 px-4 text-base placeholder-gray-300"
+              />
+              <div
+                className={`${isFetching || isDebouncing ? "flex" : "hidden"} absolute bottom-3 right-3 items-center justify-center`}
+              >
+                <Spinner className="size-4" />
+              </div>
+            </div>
+
+            <div className="mt-3 text-sm md:text-right">
+              <label
+                title="Use earlier images as references"
+                className="inline-flex items-center gap-2"
+              >
+                Consistency mode
+                <Switch
+                  checked={iterativeMode}
+                  onCheckedChange={setIterativeMode}
+                />
+              </label>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+
+    
       <footer className="mt-16 w-full items-center pb-10 text-center text-gray-300 md:mt-4 md:flex md:justify-between md:pb-5 md:text-xs lg:text-sm">
         <p>
           Powered by{" "}
           <a
-            href="https://www.dub.sh/together-ai"
+            href="https://chloesolana.xyz/"
             target="_blank"
             className="underline underline-offset-4 transition hover:text-blue-500"
           >
-            Together.ai
-          </a>{" "}
-          &{" "}
-          <a
-            href="https://dub.sh/together-flux"
-            target="_blank"
-            className="underline underline-offset-4 transition hover:text-blue-500"
-          >
-            Flux
+            Chloe Token
           </a>
         </p>
 
         <div className="mt-8 flex items-center justify-center md:mt-0 md:justify-between md:gap-6">
-          <p className="hidden whitespace-nowrap md:block">
-            100% free and{" "}
-            <a
-              href="https://github.com/Nutlope/blinkshot"
-              target="_blank"
-              className="underline underline-offset-4 transition hover:text-blue-500"
-            >
-              open source
-            </a>
-          </p>
-
           <div className="flex gap-6 md:gap-2">
-            <a href="https://github.com/Nutlope/blinkshot" target="_blank">
+            <a href="https://dexscreener.com/solana/9zcnfx72eavt2skikhkztuxaeyr5obcpbudfyvfawnpg" target="_blank">
               <Button
                 variant="outline"
                 size="sm"
                 className="inline-flex items-center gap-2"
               >
-                <GithubIcon className="size-4" />
-                GitHub
+                Chloe Chart
               </Button>
             </a>
-            <a href="https://x.com/nutlope" target="_blank">
+            <a href="https://x.com/peanutchloesol" target="_blank">
               <Button
                 size="sm"
                 variant="outline"
                 className="inline-flex items-center gap-2"
               >
-                <XIcon className="size-3" />
                 Twitter
+              </Button>
+            </a>
+            <a href="https://t.me/pnutssistercto" target="_blank">
+              <Button
+                size="sm"
+                variant="outline"
+                className="inline-flex items-center gap-2"
+              >
+                Community
               </Button>
             </a>
           </div>

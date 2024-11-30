@@ -14,11 +14,11 @@ const geistMono = localFont({
   variable: "--font-geist-mono",
 });
 
-let title = "BlinkShot – Real-Time AI Image Generator";
+let title = "Chloe AI – Real-Time AI Image Generator";
 let description = "Generate images with AI in a milliseconds";
-let url = "https://www.blinkshot.io/";
-let ogimage = "https://www.blinkshot.io/og-image.png";
-let sitename = "blinkshot.io";
+let url = "https://chloesolana.xyz";
+let ogimage = "https://chloesolana.xyz/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fs.mkswft.com%2FRmlsZTo1NmQzOGYxYS0wMDRiLTQyMzItODBjMS0yZTc2MjQ0NGE4YjA%3D%2Fjustice1.png&w=3840&q=75";
+let sitename = "chloesolana.xyz";
 
 export const metadata: Metadata = {
   metadataBase: new URL(url),
